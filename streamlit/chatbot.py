@@ -86,7 +86,7 @@ def main():
             else:
                 bot_reply = get_response_gemini(user_prompt)
         except Exception as e:
-            bot_reply = f"❌ Error: {str(e)}"
+            bot_reply = f"Error: {str(e)}"
 
         st.chat_message("assistant").markdown(bot_reply)
         st.session_state.messages.append({"role": "assistant", "content": bot_reply})
